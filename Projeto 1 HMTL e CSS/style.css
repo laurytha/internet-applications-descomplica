@@ -1,0 +1,88 @@
+body{
+    font-weight: 400;
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 15px;    
+    line-height: 2.2em;     /* espaçamento entre linhas relativa ao tamanho de body */
+    color: #818181;
+    margin: 0;
+}
+
+header{
+    background-color: #f4511e;
+}
+
+section, footer {
+    margin: 40px;
+}
+
+h1{
+    font-size: 63px;
+    color: #303030;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-size: 24px;
+    text-transform: uppercase;  /* todo em maiúsculo */
+    color: #303030;
+    font-weight: 600;   /* espessura da fonte */
+}
+
+nav li a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;  /* retira sublinhado do link */
+}
+
+nav li{
+    float: left;
+}
+
+nav ul{
+    float: right;
+    list-style: none;   /* retira os pontos da lista */
+}
+
+nav{
+    font-size: 12px;
+    letter-spacing: 4px;    /* espaçamento entre letras */
+    height: 50px;
+    background-color: #f03232;
+    padding-right: 40px;
+}
+
+table{
+    width: 100%;
+}
+
+table td{
+    color: #303030;
+    padding: 5px;
+}
+
+table tr:nth-child(eveb){  /* pseudo classes para linhas pares*/
+    background-color: #e9e9e9;
+}
+
+table tr:nth-child(odd){
+    background-color: #bdbdbd;
+}
+
+table thead th{
+    background-color: #f4511e;
+    color: white;
+}
+
+#pacotes .figuras figure{
+    display: inline-block;
+}
+
+#pacotes .figuras, #pacotes .videos{
+    text-align: center;
+}
+
+.figuras figure {
+    margin: 10px;
+}
