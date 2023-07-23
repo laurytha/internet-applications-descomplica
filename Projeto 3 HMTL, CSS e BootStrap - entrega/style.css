@@ -1,0 +1,22 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+#navbarSupportedContent .nav-item {
+    margin: 0 30px;
+}
+
+#gridFrete {
+    background: #ff964b;
+    position: relative;
+    margin-top: -1px;
+}
+
+#cardProdutos h5 {
+    text-align: center;
+}
