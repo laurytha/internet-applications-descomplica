@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Laurytha Carlos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/cart.js"></script>
+    <title>ApiRei</title>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="container-fluid p-3 navbar-dark bg-black text-center">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">ApiRei</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center bg-black"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Nossos Produtos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Quem Somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Nosso Time</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div class="container">
+                    <main>
+                        <div class="py-5 text-center">
+                            <h2>Carrinho de Compras</h2>
+                        </div>
+                    </main>
+                </div>
+                <div class="container bg-white rounded-top mt-0" id="zero-pad">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10 col-12 pt-3" id="carrinho">
+                            <div class="d-flex flex-column pt-4">
+                                <div>
+                                    <h5 class="text-uppercase font-weight-normal">Resumo da Compra</h5>
+                                </div>
+                                <div class="font-weight-normal">6 itens</div>
+                            </div>
+                            <div class="d-flex flex-row px-lg-5 mx-lg-5 mobile" id="heading">
+                                <div class="px-lg-5 mr-lg-5" id="produc">PRODUTOS</div>
+                                <div class="px-lg-5 ml-lg-5" id="prc">PREÇO</div>
+                                <div class="px-lg-5 ml-lg-1" id="quantity">QUANTIDADE</div>
+                                <div class="px-lg-5 ml-lg-3" id="total">TOTAL</div>
+                            </div>
+                            <div id="produto0"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/1.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Xarope Mel, Gengibre e Limão</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 150ml</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$25,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(0)">
+                                    </span><span class="px-md-3 px-1" id="quantidade0">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(0)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total0"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div id="produto1"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/2.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Favo de Mel</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 750g</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$50,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(1)">
+                                    </span><span class="px-md-3 px-1" id="quantidade1">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(1)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total1"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div id="produto2"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/3.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Mel Puro De Abelha</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 1000ml</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$40,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(2)">
+                                    </span><span class="px-md-3 px-1" id="quantidade2">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(2)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total2"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div id="produto3"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/4.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Própolis</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 35ml</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$50,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(3)">
+                                    </span><span class="px-md-3 px-1" id="quantidade3">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(3)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total3"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div id="produto4"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/5.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Pólen</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 30g</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$35,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(4)">
+                                    </span><span class="px-md-3 px-1" id="quantidade4">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(4)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total4"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div id="produto5"
+                                class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div><img src="img/card produtos/6.png" width="150" height="100" alt="" id="image">
+                                    </div>
+                                    <div class="d-flex flex-column pl-md-3 pl-1">
+                                        <div>
+                                            <h6>Sabonete de Mel de Abelha</h6>
+                                        </div>
+                                        <div>Tamanho:<span class="pl-2"> único 80g</span></div>
+                                    </div>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$5,00</b></div>
+                                <div class="pl-md-0 pl-2">
+                                    <span class="fa fa-minus-square text-secondary" onclick="removerItem(5)">
+                                    </span><span class="px-md-3 px-1" id="quantidade5">0</span>
+                                    <span class="fa fa-plus-square text-secondary" onclick="adicionarItem(5)"></span>
+                                </div>
+                                <div class="pl-md-0 pl-1"><b>R$</b> <span id="total5"></span></div>
+                                <div class="close">&times;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container rounded-bottom py-4" id="zero-pad">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10 col-12">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <a href="index.html" class="btn btn-outline-secondary px-lg-5 px-3" role="button"
+                                        aria-pressed="true">VOLTAR</a>
+                                </div>
+                                <div class="px-md-0 px-1" id="footer-font">
+                                    <b class="pl-md-4">SUBTOTAL R$<span class="pl-md-4"
+                                            id="valorTotalCompra"></span></b>
+                                </div>
+                                <div>
+                                    <a href="" class="btn btn-sm bg-dark text-white px-lg-5 px-3"
+                                        role="button" aria-pressed="true">CONTINUE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <footer class="text-center text-white navbar-dark bg-black">
+                <div class="text-center text-white p-5">
+                    © 2023 Copyright:
+                    <a class="text-white" href="https://www.linkedin.com/in/laurythacarlos">Laurytha Carlos</a>
+                </div>
+            </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous"></script>
+        </div>
+</body>
+<div class="modal fade" id="modalComprarProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-5" id="exampleModalLabel">Suas compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Produto adicionado ao carrinho!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar comprando</button>
+                <a href="carrinho.html" type="button" class="btn btn-success">Finalizar a compra</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
+
